@@ -16,8 +16,13 @@ function onSearch(evt) {
   if (email.value === '' || password.value === '') {
     return alert('Всі поля мають бути заповнені');
   }
+  const dataInput = {
+    email: email.value,
+    password: password.value,
+  };
 
-  console.log(`Email: ${email.value}, Password: ${password.value}`);
+  console.log(dataInput);
+  //  console.log(evt.currentTarget.elements);
 
   evt.currentTarget.reset();
 }
